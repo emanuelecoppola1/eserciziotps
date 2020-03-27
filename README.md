@@ -1,0 +1,1 @@
+Creare le tabelle con sqlite3 utilizzando il file ' libri.sql '

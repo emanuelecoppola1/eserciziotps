@@ -1,0 +1,22 @@
+<% libri.forEach(libri => { %>
+    <ul>
+        <li>ID: <%= libri.id %> </li>
+        <li>Titolo: <%= libri.titolo %> </li>
+        <li>Modifica sotto</li>
+        <form method="POST" action="/modificalibri">
+            <input type="hidden" name="id" value="<%= libri.id %> ">
+            <li> <input type="text" name="titolo" value="<%= libri.titolo %>"> </li>
+            <input type="submit" value="Modifica">
+        </form>
+        <form action="/dellibro" method="post">
+            <input type="hidden" name="id" value="<%= libri.id %>">
+            <input type="submit" value="Elimina">
+        </form>
+    </ul>
+<% }) %>
+<p>Aggiunta libro</p>
+<form action="/addlibro" method="post">
+    <input type="text" name="titolo" value="titolo">
+    <input type="submit" value="Aggiungi">
+</form>
+<a href="/admin">Torna alla home admin</a>

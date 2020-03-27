@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+    <title>Index</title>
+</head>
+<body>
+    <h1>Lista autori e libri</h1>
+    <% rows.forEach(row => { %>
+        <ul>
+            <li>ID: <%= row.id %> </li>
+            <li>Titolo: <%= row.titolo %> </li>
+            <li>Autori: <%= row.autori %> </li>
+        </ul>
+    <% }) %>
+</body>
+</html>
